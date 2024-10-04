@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B9A6 Rentro-Froum</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.11/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/0b98de5bb1.js" crossorigin="anonymous"></script>
+
+</head>
+<body style="font-family: sans-serif;">
+
+<!-- header start here  -->
+
+<header class="container mx-auto">
+    <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">ShawonTia</a>
+        </div>
+        <div class="flex-none gap-4">
+            <button class="border-2 bg-[#ebebeba1] rounded-full px-4 py-4"><i class="fa-regular fa-flag fa-xl"></i></button>
+            <button class="border-2 bg-[#ebebeba1] rounded-full px-4 py-4"><i class="fa-solid fa-pen fa-xl"></i></button>
+            <button class="border-2 bg-[#ebebeba1] rounded-full px-4 py-4" ><i class="fa-solid fa-house fa-xl"></i></button>
+            <button class="border-2 bg-[#ebebeba1] rounded-full px-4 py-4"><i class="fa-solid fa-user-group fa-xl"></i></button>
+          <button class="btn bg-[#1d77ff] text-white hover:text-black">Sign In</button>
+         
+        </div>
+      </div>
+
+      <!-- bannar start here  -->
+      <div class="mt-8">
+        <!-- <img src="./images/bgbanner.png" alt=""> -->
+        <div class="bg-[url('./images/bgbanner.png')] rounded-xl  bg-cover bg-no-repeat bg-[#12132D]  h-[90vh]  flex justify-center items-center  ">
+            <div class=" basis-1/2">
+                <h1 class="text-white text-7xl leading-relaxed font-bold">Welcome to the 
+                    <span class="bg-gradient-to-r from-[#6E72E6]  to-[#32346E] bg-clip-text text-transparent">ReTro</span> Forum</h1>
+                    <p class="text-white w-[60%] leading-relaxed mb-4">Share your favorite opinion and win and wp 
+                        forum coffee mug!</p>
+    
+                        <label class=" bg-white px-2 py-4 rounded-full w-full ">
+                            <input type="text" class="grow px-4 outline-none" placeholder="Search here anything" />
+                            <button class="bg-[#797DFC] py-2 px-6 text-white rounded-full">Search</button></label>
+            </div>
+            <div class="bg-white py-8 px-8 rounded-lg">
+                <ul class="text-xl">
+                    <li class="flex justify-between my-4 gap-8"><span>Registered Users</span>     <span>01</span></li>
+                    <li class="flex justify-between my-4 gap-8"><span>Forum</span>     <span>05</span></li>
+                    <li class="flex justify-between my-4 gap-8"><span>Topics</span>     <span>01</span></li>
+                    <li class="flex justify-between my-4 gap-8"><span>Replies</span>     <span>01</span></li>
+                    
+                    
+                </ul>
+            </div>
+          </div>
+      </div>
+
+      <!-- bannar end here  -->
+</header>
+<!-- header end here  -->
+
+<!-- main section start here  -->
+ <main class="container mx-auto mt-12">
+
+    <!-- heading section start here  -->
+     <div class="text-center py-8">
+
+        <h1 class="text-4xl font-bold mb-8"> Let’s Discuss</h1>
+        <p class="text-lg w-[60%] mx-auto text-[#777777e3]" >Yes, you can run unit tests and view the results directly within the app. The 
+            integrated testing features allow for a streamlined .</p>
+     </div>
+    <!-- heading section end here  -->
+
+    <!-- 1st discuss section start here  -->
+
+    <section class="flex justify-around ">
+
+        <div id="cardcon" class="card-container basis-[60%]">
+          
+        
+        </div>
+        <div class="basis-[35%]">
+            <div class="bg-[#f0f0f0e0] pb-4 rounded-lg">
+            <div class="flex justify-between gap-4 items-center my-4 p-4 rounded-xl ">
+                <h1 class="text-xl font-bold">Title</h1>
+                <p class="text-gray-600">Mark as read (<span id="countermark">0</span>)</p>
+            </div>
+            <div id="addlist">
+           
+            </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- 1st discuss section end here  -->
+ </main>
+<!-- main section end here  -->
+
+ <script src="./app.js"></script>
+</body>
+</html>
