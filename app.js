@@ -10,7 +10,7 @@ const displayPosts =(myPost) => {
 
     const mypostcontainer = document.getElementById('cardcon')
  myPost.forEach(post => {
-    console.log(post)
+    // console.log(post)
     const {category, image,description,comment_count,title,view_count,author,posted_time,isActive} = post
 
     const carditem = document.createElement('div');
@@ -55,7 +55,7 @@ const displayPosts =(myPost) => {
 
 }
 
-loadData()
+
 function additem(title,view_count){
 
 
@@ -74,12 +74,45 @@ function additem(title,view_count){
     
     mark.innerText++
 
- 
-
-     
-   
-  
-    
-
    
 }
+loadData();
+
+const loadlatest = () =>{
+    
+    fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts')
+    .then(response => response.json())
+    .then(json => displaylatestPosts(json))
+}
+
+const displaylatestPosts = (latest) =>{
+
+    const latestContainer = document.getElementById('latestId');
+    latest.forEach(laPost =>{
+
+        const {title,cover_image,profile_image,description,author} = laPost;
+        console.log(laPost);
+
+        const latestpost = document.createElement('div');
+        latestpost.classList =`border-2 p-6 rounded-xl`
+        latestpost.innerHTML =`<div class="">
+
+            <img class="rounded-xl"  src= ${cover_image} alt="">
+            <p class="py-4 text-gray-400 flex gap-4"><span><i class="fa-solid fa-calendar-days"></i></span> ${author.posted_date? `${author.posted_date}`:'No publish date'} </p>
+          <div>
+           <h2 class="text-xl font-bold py-2">${title}</h2>
+                <p class="py-2 text-gray-400">${description} </p></div> 
+
+                    <div class="flex py-3 gap-4">
+                        <div class='w-[50px]'><img class="rounded-full w-full object-cover" src=${profile_image} alt="" srcset=""></div>
+                        <div class="">
+                            <p class="font-bold">${author.name}</p>
+                            <p class="text-gray-400">${author.designation? `${author.designation}`: `unknown`  }</p>
+                        </div>
+                    </div>
+        </div>`;
+        latestContainer.append(latestpost);
+
+    })
+}
+loadlatest()
