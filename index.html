@@ -14,11 +14,11 @@
 <!-- header start here  -->
 
 <header class="container mx-auto">
-    <div class="navbar bg-base-100">
+    <div class="navbar  bg-base-100">
         <div class="flex-1">
-          <a class="btn btn-ghost text-xl">ShawonTia</a>
+          <a class=" hidden md:block text-xl">ShawonTia</a>
         </div>
-        <div class="flex-none gap-4">
+        <div class="flex-none justify-center gap-4">
             <button class="border-2 bg-[#ebebeba1] rounded-full px-4 py-4"><i class="fa-regular fa-flag fa-xl"></i></button>
             <button class="border-2 bg-[#ebebeba1] rounded-full px-4 py-4"><i class="fa-solid fa-pen fa-xl"></i></button>
             <button class="border-2 bg-[#ebebeba1] rounded-full px-4 py-4" ><i class="fa-solid fa-house fa-xl"></i></button>
@@ -31,15 +31,15 @@
       <!-- bannar start here  -->
       <div class="mt-8">
         <!-- <img src="./images/bgbanner.png" alt=""> -->
-        <div class="bg-[url('./images/bgbanner.png')] rounded-xl  bg-cover bg-no-repeat bg-[#12132D]  h-[90vh]  flex justify-center items-center  ">
+        <div class="bg-[url('./images/bgbanner.png')] rounded-xl  bg-cover bg-no-repeat bg-[#12132D]  h-[100%] md:h-[90vh] flex flex-col md:flex-row justify-center items-center  ">
             <div class=" basis-1/2">
-                <h1 class="text-white text-7xl leading-relaxed font-bold">Welcome to the 
+                <h1 class="text-white text-4xl md:text-7xl leading-relaxed font-bold">Welcome to the 
                     <span class="bg-gradient-to-r from-[#6E72E6]  to-[#32346E] bg-clip-text text-transparent">ReTro</span> Forum</h1>
                     <p class="text-white w-[60%] leading-relaxed mb-4">Share your favorite opinion and win and wp 
                         forum coffee mug!</p>
     
                         <label class=" bg-white px-2 py-4 rounded-full w-full ">
-                            <input type="text" class="grow px-4 outline-none" placeholder="Search here anything" />
+                            <input type="text" id="search-input" class="grow px-4 outline-none" placeholder="Search here anything" />
                             <button class="bg-[#797DFC] py-2 px-6 text-white rounded-full">Search</button></label>
             </div>
             <div class="bg-white py-8 px-8 rounded-lg">
@@ -73,7 +73,7 @@
 
     <!-- 1st discuss section start here  -->
 
-    <section class="flex justify-around ">
+    <section class="flex flex-col md:flex-row justify-around  ">
 
         <div id="cardcon" class="card-container basis-[60%]">
           
@@ -158,6 +158,31 @@
     <!-- 3rd latest posts end here  -->
  </main>
 <!-- main section end here  -->
+
+<!-- footer start here  -->
+ <footer class="my-8 bg-[#e4e4e4]">
+
+    <!-- heading section start here  -->
+    <div class="text-center py-8">
+
+        <h1 class="text-4xl font-bold mb-8"> ShawonTia</h1>
+        <p class="text-lg w-[60%] mx-auto text-[#777777e3]" >Yes, you can run unit tests and view the results directly within the app. The 
+            integrated testing features allow for a streamlined .</p>
+     </div>
+
+     <div class="w-[80%] mx-auto text-center py-4" >
+
+        <ul class="flex justify-center gap-4 text-xl">
+            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-instagram"></i>           
+             <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+        </a></li>
+        </ul>
+     </div>
+    <!-- heading section end here  -->
+ </footer>
+<!-- footer end here  -->
 
  <script src="./app.js"></script>
 </body>

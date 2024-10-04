@@ -8,7 +8,9 @@ const loadData = () =>{
 
 const displayPosts =(myPost) => {
 
+
     const mypostcontainer = document.getElementById('cardcon')
+    mypostcontainer.innerHTML ='';
  myPost.forEach(post => {
     // console.log(post)
     const {category, image,description,comment_count,title,view_count,author,posted_time,isActive} = post
@@ -116,3 +118,18 @@ const displaylatestPosts = (latest) =>{
     })
 }
 loadlatest()
+
+const loadVideos = (searchText = "") => {
+    //fetch the data
+    fetch(
+      `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`
+    )
+      .then((res) => res.json())
+      .then((data) => displayPosts(data.posts))
+      .catch((error) => console.log(error));
+  };
+  
+  document.getElementById("search-input").addEventListener("keyup", (e) => {
+    loadVideos(e.target.value);
+  });
+
